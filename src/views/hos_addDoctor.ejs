@@ -1,0 +1,89 @@
+<%- include("partials/hos_sidebar.ejs"); %>
+
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2">
+    <!-- Sidebar -->
+
+  </div>
+
+  <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10">
+    <div class="container-xl px-4 mt-4">
+      <div class="row">
+        <div class="col-xl-4">
+          <!-- Profile picture card-->
+          <div class="card mb-4 mb-xl-0 w-100">
+            <div class="card-header">Profile Picture</div>
+            <div class="card-body text-center">
+              <!-- Profile picture image-->
+              <img class="img-account-profile rounded-circle mb-2" src="./../public/images/admin_ava.jpeg" alt="">
+              <!-- Profile picture help block-->
+              <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+              <!-- Profile picture upload button-->
+              <button class="btn btn-primary" type="button" for="customFile">Upload new image</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <!-- Account details card-->
+          <div class="card mb-4 w-100">
+            <div class="card-header">Account Details</div>
+            <div class="card-body">
+
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Doctor's Name</label>
+                  <input class="form-control" name="name" id="inputUsername" type="text" placeholder="Enter doctor's name" value="">
+                </div>
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="floatingSelectGender">Gender</label>
+                      <select class="form-select" id="floatingSelectGender" name="gender" aria-label="Floating label select example">
+                          <option selected>Choose gender</option>
+                          <option value="0">Male</option>
+                          <option value="1">Female</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputYear">Year Experience</label>
+                    <input class="form-control" id="inputYear" name="yearExp" type="number" placeholder="Enter doctor's experience" value="">
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
+                    <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Enter your email address" value="">
+                </div>
+                <div class="row gx-3 mb-3">
+                    <div class="col-md-6">
+                      <label class="small mb-1" for="inputPhone">Phone number</label>
+                      <input class="form-control" id="inputPhone" name="phone" type="tel" placeholder="Enter your phone number" value="">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="small mb-1" for="inputBirthday">Birthday (mm/dd/yyyy)</label>
+                      <input class="form-control" id="inputBirthday" type="text" name="birth" placeholder="Enter your birthday" value="">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="small mb-1" for="inputDes">Doctor's description</label>
+                    <textarea class="form-control" id="inputDes" name="description" rows="4" cols="50">
+                    </textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="small mb-1" for="inputSchedule">Schedule (first digit for the day of week and the second for the shift)</label>
+                    <label class="small mb-1" for="inputSchedule">Shift: (1)7:30-9:30, (2)9:30-11:30, (3)13:30-15:30, (4)15:30-17:30</label>
+                    <input class="form-control" id="inputSchedule" name="schedule" type="text" placeholder="Enter doctor's Schedule" value="">
+                </div>
+                <div class="mb-3">
+                    <label class="small mb-1" for="floatingSelectSpec">Specialist</label>
+                    <select class="form-select" id="floatingSelectSpec" name="specialist" aria-label="Floating label select example">
+                            
+                    </select>
+                </div>
+                <button id="submit-new" class="btn btn-primary" type="submit">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<script type="text/javascript" src="../../public/js/addDoctor.js"></script>

@@ -1,0 +1,81 @@
+<%- include("partials/ad_sidebar.ejs"); %>
+<%- include("partials/table.ejs"); %>
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2">
+    <!-- Sidebar -->
+
+  </div>
+
+  <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10" style="width:95%; padding-left: 20rem;">
+    <br>
+    <div class="row">
+      <a href="hospital/add">
+        <button type="button" class="btn btn-outline-success" style="float: right; margin-bottom: 0.5rem;">Create new hospital</button>
+      </a>
+    </div>
+    <table id="example" class="table table-hover table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Name</th>
+          <th>Location</th>
+          <th>City</th>
+          <th>Contact number</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% hospital.forEach((hos)=>{%>
+        <tr>
+          <td><%= hos.username%></td>
+          <td><%= hos.name%></td>
+          <td><%= hos.location%></td>
+          <td><%= hos.city%></td>
+          <td><%= hos.contactNumber%></td>
+          <td><%= hos.email%></td>
+          <td>
+            <div class="row">
+              <div class="col" style="max-width:10%;">
+                <a href="hospital/update/<%= hos._id%>" class="text-success">
+                  <i class="fa-solid fa-pencil" style="margin-top: 0.5rem"></i>
+                </a>
+              </div>
+              <div class="col">
+                <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="fa-solid fa-trash" style="color: #ff0000;"></i>
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <form action="hospital/delete/<%= hos._id %>?_method=DELETE" method="post">
+                          <button type="submit" class="btn" data-bs-dismiss="modal">
+                            Save changes
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <form action="hospital/delete/<%= hos._id %>?_method=DELETE" method="post">
+                  <button type="submit" class="btn">
+                    <i class="fa-solid fa-trash" style="color: #ff0000;"></i>
+                  </button>
+                </form>
+              </div>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

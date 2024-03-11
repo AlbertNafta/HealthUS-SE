@@ -1,0 +1,197 @@
+<%- include("partials/hos_sidebar.ejs"); %>
+
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2">
+    <!-- Sidebar -->
+
+  </div>
+  <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10">
+    <div class="row">
+
+      <!-- Earnings (Monthly) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-5">
+        <div class="card" , style="width: 17rem;">
+          <div class="border border-1 border-info rounded shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                    Medical records</div>
+                  <div class="h6 mb-0 font-weight-bold text-gray-800">30</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-hospital fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earnings (Annual) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-5">
+        <div class="card" , style="width: 17rem;">
+          <div class="border border-1 border-secondary rounded shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                    Appointments</div>
+                  <div class="h6 mb-0 font-weight-bold text-gray-800">900</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-users fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tasks Card Example -->
+      <div class="col-xl-3 col-md-6 mb-5">
+        <div class="card" , style="width: 17rem;">
+          <div class="border border-1 border-success rounded shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    Doctors</div>
+                  <div class="h6 mb-0 font-weight-bold text-gray-800">700</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pending Requests Card Example -->
+      <div class="col-xl-3 col-md-6 mb-5">
+        <div class="card" , style="width: 17rem;">
+          <div class="border border-1 border-warning rounded shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                    Specialists</div>
+                  <div class="h6 mb-0 font-weight-bold text-gray-800">20</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-message fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-bottom: 1rem;">
+      <div class="col-xl">
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Appointment Status Overview</h6>
+          </div>
+          <div class="card-body">
+            <div class="chart-pie">
+              <canvas id="piechart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl">
+        <div class="card" style="width: 35rem;">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Appointment Overview</h6>
+          </div>
+          <div class="card-body">
+            <div class="chart-area" style="height:15rem">
+              <canvas id="areachart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="card" style="width: 30rem; height:100%">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Schedule Overview</h6>
+          </div>
+          <div class="card-body">
+            <div class="chart-bar" style="padding-top:10px">
+              <canvas id="barchart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5">
+        <div class="border border-1 border-info rounded shadow h-100 w-60 py-2">
+          <div class="card-leaderboard" style="padding: 10px;">
+            <div class="card-header">
+              <div class="row padding">
+                <div class="col-8" style="padding-left: 1.5rem;">
+                  <h5 class="card-title">Doctor leaderboard</h5>
+                </div>
+                <div class="col-4">
+                  <p class="card-button">
+                    <a class="btn btn-outline-info" href="#" role="button">View details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="table-leaderboard table-responsive">
+                  <table class="table" style="align-items: center;">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Partnership</th>
+                        <th>Ratings</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>🥇</td>
+                        <td>Ly Dang Khoa</td>
+                        <td>Since 7/2023</td>
+                        <td><img src="../public/images/star.png" style="max-width: 20%; ">4.5</img></td>
+                      </tr>
+                      <tr>
+                        <td>🥈</td>
+                        <td>Lac Thieu Quan</td>
+                        <td>Since 7/2023</td>
+                        <td><img src="../public/images/star.png" style="max-width: 20%; ">4.5</img></td>
+                      </tr>
+                      <tr>
+                        <td>🥉</td>
+                        <td>Nguyen Cao Luan</td>
+                        <td>Since 7/2023</td>
+                        <td><img src="../public/images/star.png" style="max-width: 20%; ">4.5</img></td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">4</td>
+                        <td>Tran Gia Thinh</td>
+                        <td>Since 7/2023</td>
+                        <td><img src="../public/images/star.png" style="max-width: 20%; ">4.5</img></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../public/js/hospital_charts.js"></script>
+</div>
+
+<!-- Earnings (Monthly) Card Example -->

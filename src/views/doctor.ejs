@@ -1,0 +1,36 @@
+<%- include("partials/hos_sidebar.ejs"); %>
+<div class="container-list">
+    <div class="title-and-create">
+        <div class="title">
+            <h2>List Doctor</h2>
+        </div>
+        <div class="create-button">
+            <a class="btn btn-outline-primary" href="doctor/add" role="button">Create New</a>
+        </div>
+    </div>
+    <div class="list-table">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col"># Doctor</th>
+                <th scope="col">Name</th>
+                <th scope="col"># Hospital</th>
+                <th scope="col">Specialist</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Description</th>
+                <th scope="col">Avatar</th>
+                <th scope="col">Schedule</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody class="list-doctor">
+              
+            </tbody>
+          </table>
+        <script type="text/javascript" src="../public/js/hospitalDoctor.js"></script>
+    </div>
+</div>

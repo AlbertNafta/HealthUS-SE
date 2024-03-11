@@ -1,0 +1,57 @@
+<%- include("partials/ad_sidebar.ejs"); %>
+<%- include("partials/table.ejs"); %>
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2">
+    <!-- Sidebar -->
+  </div>
+
+  <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10" style="width:95%; padding-left: 20rem;">
+    <br>
+    <div class="row">
+      <a href="news/add">
+        <button type="button" class="btn btn-outline-success" style="float: right; margin-bottom: 0.5rem;">Create</button>
+      </a>
+    </div>
+    <table id="example" class="table table-hover table-bordered table-responsive">
+      <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Content</th>
+            <th>Image</th>
+            <th>Published Date</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% newdata.forEach((news)=>{%>
+          <%let D = new Date(news.publishedDate);%>
+          <%const options = {month: 'long', day: 'numeric', year: 'numeric' };%>
+          <%D = D.toLocaleString('en-US', options);%>
+        <tr>
+            <td><%= news.title %></td>
+            <td><%= news.author %></td>
+            <td><%= news.content %></td>
+            <td><%= news.image %></td>
+            <td><%= D %></td>
+          <td>
+            <div class="row">
+              <div class="col" style="max-width:10%;">
+                <a href="news/update/<%= news._id%>" class="text-success">
+                  <i class="fa-solid fa-pencil" style="margin-top: 0.5rem"></i>
+                </a>
+              </div>
+              <div class="col">
+                <form action="news/delete/<%= news._id %>?_method=DELETE" method="post">
+                  <button type="submit" class="btn">
+                    <i class="fa-solid fa-trash" style="color: #ff0000;"></i>
+                  </button>
+                </form>
+              </div>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

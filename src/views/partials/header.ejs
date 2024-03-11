@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health US - Making Appointment Online</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Boostrap script -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+
+<body>
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- End of Script -->
+  <div id="container-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img class="header-logo" src="../../public/images/logo-Header.png"
+            alt="logoHeader"></a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mb-2 mb-lg-0"> <!-- Change 'me-auto' to 'mx-auto' to center align nav-items -->
+            <li class="nav-item nav-page">
+              <a class="nav-link active" aria-current="page" href="/">Home Page</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="#">Instruction</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="/making-appointment">Making Appointment</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="/contract-us">Collaborate</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="/FAQs">FAQs</a>
+            </li>
+            <li class="nav-item nav-button">
+              <a href="/login" class="btn" id="login-btn">Log In</a>
+            </li>
+            <li class="nav-item nav-button">
+              <a href="/signup" class="btn" id="signup-btn">Sign Up</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" style="display: none;" id="username">Guest</a>
+            </li>
+            <li class="nav-item nav-button">
+              <a class="btn" style="display: none;" id="logout-btn">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <script type="text/javascript" src="../public/js/header.js"></script>

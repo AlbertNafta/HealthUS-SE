@@ -1,0 +1,255 @@
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- FontAwesome JS-->
+<!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script> -->
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap"
+    rel="stylesheet">
+
+<!-- Boostrap script -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS stylesheets -->
+<link rel="stylesheet" href="../../public/css/admin.css">
+<link rel="stylesheet" href="../../public/css/spec.css">
+
+<!-- Script -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<!-- End of Script -->
+
+<!--Main Navigation-->
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <a href="/hospital" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                    <i class="fas fa-chart-line fa-fw me-3"></i><span>Overview</span>
+                </a>
+                <a href="/hospital/doctor" class="list-group-item list-group-item-action py-2 ripple ">
+                    <i class="fas fa-user-doctor fa-fw me-3"></i><span>Doctor</span>
+                </a>
+                <a href="/hospital/appointment"" class=" list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-calendar-check fa-fw me-3"></i><span>Appointment</span></a>
+                <a href="/hospital/records"" class=" list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-notes-medical fa-fw me-3"></i><span>Medical records</span></a>
+                <a href="/hospital/specialist"" class=" list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-comment fa-fw me-3"></i><span>Specialist</span></a>
+                <a href="/hospital/schedule"" class=" list-group-item list-group-item-action py-2 ripple">
+                    <i class="fas fa-calendar fa-fw me-3"></i><span>Schedule</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-gear fa-fw me-3"></i><span>Settings</span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../../public/images/Logo-header.png" class="img-fluid-admin" alt="Logo header"
+                    loading="lazy" />
+            </a>
+            <!-- Search form -->
+            <!-- <form class="d-none d-md-flex input-group w-auto my-auto">
+              <input
+                    autocomplete="off"
+                    type="search"
+                    class="form-control rounded"
+                    placeholder='Search (accounts, hospitals,...)'
+                    style="min-width: 225px"
+                    />
+              <span class="input-group-text border-0"
+                    ><i class="fas fa-search"></i
+                ></span>
+            </form> -->
+
+            <!-- Right links -->
+            <ul class="navbar-nav ms-auto d-flex flex-row">
+                <li class="nav-item dropdown">
+                    <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Some news</a></li>
+                        <li><a class="dropdown-item" href="#">Another news</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Avatar -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <ul class="list-group-flush">
+                            <li>
+                                <h6 class="list-group-item-avatar" id="username">Dang Khoa</h6>
+                            </li>
+                            <li class="list-group-item"><span class="badge bg-primary">Admin</span></li>
+                        </ul>
+                        <img src="../../public/images/admin_ava.jpeg" class="rounded-circle" height="40"
+                            alt="avatar header" loading="lazy" />
+
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">My profile</a></li>
+                        <li><a class="dropdown-item" href="/logout" id="logout-btn">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+</header>
+
+<body class="app mt-0 mt-5">
+    <div class="app-wrapper">
+        <div class="app-content pt-3 p-md-3 p-lg-4">
+            <div class="container-xl">
+                <h1 class="app-page-title">Hospital profile</h1>
+                <div class="row gy-4">
+                    <div class="col-12 col-lg-6">
+                        <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+                            <div class="app-card-body px-4 w-100">
+                                <div class="py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label mb-2"><strong>Photo</strong></div>
+                                            <div class="item-data"><img id="hos-ava" src="../public/images/logoNTP.png"
+                                                    alt=""></div>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+                            </div><!--//app-card-body-->
+                            <div class="app-card-footer p-4 mt-auto">
+                                <a class="btn app-btn-secondary" href="#">Change image</a>
+                            </div><!--//app-card-footer-->
+                        </div><!--//app-card-->
+                    </div><!--//col-->
+                    <div class="col-12 col-lg-6">
+                        <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+                            <div class="app-card-body px-4 w-100">
+                                <div class="item border-bottom py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Hospital ID </strong></div>
+                                            <div class="item-data" id="hos-id">hos003</div>
+                                        </div><!--//col-->
+                                        <div class="col text-end">
+                                            <a class="btn-sm app-btn-secondary" href="#">Change</a>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+                                <div class="item border-bottom py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Name</strong></div>
+                                            <div class="item-data" id="hos-name">Hospital of Dermato Venereology</div>
+                                        </div><!--//col-->
+                                        <div class="col text-end">
+                                            <a class="btn-sm app-btn-secondary" href="#">Change</a>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+                                <div class="item border-bottom py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Location</strong></div>
+                                            <div class="item-data" id="hos-locat">2 Nguyen Thong, P6, Q3</div>
+                                        </div><!--//col-->
+                                        <div class="col text-end">
+                                            <a class="btn-sm app-btn-secondary" href="#">Change</a>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+                                <div class="item border-bottom py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Contact number</strong></div>
+                                            <div class="item-data" id="hos-phone">0164887223</div>
+                                        </div><!--//col-->
+                                        <div class="col text-end">
+                                            <a class="btn-sm app-btn-secondary" href="#">Change</a>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+                                <div class="item border-bottom py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label"><strong>Email</strong></div>
+                                            <div class="item-data" id="hos-email">bvdalieu@gmail.com</div>
+                                        </div><!--//col-->
+                                        <div class="col text-end">
+                                            <a class="btn-sm app-btn-secondary" href="#">Change</a>
+                                        </div><!--//col-->
+                                    </div><!--//row-->
+                                </div><!--//item-->
+                            </div><!--//app-card-body-->
+                            <div class="app-card-footer p-4 mt-auto">
+                                <a class="btn app-btn-secondary" id="hos-web" href="https://www.bvdl.org.vn">Go to
+                                    hospital site</a>
+                            </div><!--//app-card-footer-->
+
+                        </div><!--//app-card-->
+                    </div><!--//col-->
+                    <div class="col-12 col-lg-12">
+                        <div class="app-card-header p-3 border-bottom-0">
+                            <div class="row align-items-center gx-3">
+                                <div class="col-auto">
+                                    <h4 class="app-card-title">Specialist</h4>
+                                </div><!--//col-->
+                                <div class="col text-end">
+                                    <a class="btn-sm app-btn-primary" id="create-new" href="/hospital/specialist/add">Create new</a>
+                                </div>
+                            </div><!--//row-->
+                        </div><!--//app-card-header-->
+                        <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+                            <div class="app-card-body px-4 w-100" id="spec-item">
+                                <!-- <div class="item border-bottom py-3">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-auto">
+                                            <div class="item-label" id="spec-name"><strong>Medical test</strong></div>
+                                            <div class="item-data" id="spec-des">Feugiat scelerisque varius morbi enim. Egestas tellus rutrum tellus pellentesque eu tincidunt.</div>
+                                        </div>
+                                        <div class="col text-end">
+                                            <a class="btn-sm app-btn-secondary" href="#">Edit</a>
+                                            <a class="btn-sm app-btn-secondary" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div><!--//app-card-body-->
+                        </div><!--//app-card-->
+                    </div>
+                </div><!--//row-->
+
+            </div><!--//container-fluid-->
+        </div><!--//app-content-->
+
+    </div><!--//app-wrapper-->
+    <script type="text/javascript" src="../public/js/spec.js"></script>
+</body>
+
+</html>

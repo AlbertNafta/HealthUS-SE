@@ -1,0 +1,50 @@
+<%- include("partials/ad_sidebar.ejs"); %>
+<%- include("partials/table.ejs"); %>
+<script defer src="../public/js/date.js"></script>
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2">
+    <!-- Sidebar -->
+
+  </div>
+
+  <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10" style="width:95%; padding-left: 20rem;">
+    <br>
+    <div class="row">
+      <a href="feedback/add">
+        <button type="button" class="btn btn-outline-success" style="float: right; margin-bottom: 0.5rem;">View details</button>
+      </a>
+    </div>
+    <table id="example" class="table table-hover table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>Hospital ID</th>
+          <th>Content</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% feedback.forEach((fdb)=>{%>
+          <%let D = new Date(fdb.date);%>
+          <%const options = {month: 'long', day: 'numeric', year: 'numeric' };%>
+          <%D = D.toLocaleString('en-US', options);%>
+        <tr>
+          <td><%= fdb.hospitalID%></td>
+          <td style="max-width: 600px;"><%= fdb.content%></td>
+          <td><%= D%></td>
+          <td>
+            <div class="row">
+              <div class="col">
+                <form action="feedback/delete/<%= fdb._id %>?_method=DELETE" method="post">
+                  <button type="submit" class="btn">
+                    <i class="fa-solid fa-trash" style="color: #ff0000;"></i>
+                  </button>
+                </form>
+              </div>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

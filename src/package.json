@@ -1,0 +1,35 @@
+{
+  "name": "intro2se-21clc10-group05",
+  "version": "1.0.0",
+  "description": "HealthUs is a comprehensive healthcare website that connects clients with a wide range of healthcare services. Our platform aims to provide convenient and accessible healthcare options for individuals seeking various medical assistance.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "@cubejs-client/core": "^0.31.0",
+    "body-parser": "^1.20.2",
+    "chart.js": "^4.3.3",
+    "connect-mongodb-session": "^3.1.1",
+    "datatables.net-dt": "^1.13.6",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "googleapis": "^123.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.3.1",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^2.0.22"
+  }
+}

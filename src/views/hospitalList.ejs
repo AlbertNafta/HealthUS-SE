@@ -1,0 +1,74 @@
+<%- include("partials/header"); %>
+
+<div id="hospital-list" class="container pt-4">
+    <p class="text-center heading pt-4">DANH SÁCH PHÒNG KHÁM</p>
+    <hr>
+    <div class="row">
+        <!-- Search Bar -->
+        <div class="col-md-3" style="border-right: 1px groove black;">
+            <div class="d-flex align-items-center">
+                <input class="form-control" id="search-input" type="text" placeholder="Tìm kiếm...">
+                <button type="submit" class="btn btn-primary mb-3 search-icon"> <i class="fa fa-search"></i> </button>
+            </div>
+            <div class="dropdown d-flex justify-content-start pt-4">
+                <button class="btn dropdown-toggle" type="button" id="order_dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sắp xếp theo
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Tăng dần theo tên</a></li>
+                  <li><a class="dropdown-item" href="#">Giảm dần theo tên</a></li>
+                  <li><a class="dropdown-item" href="#">Phổ biến nhất</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- List -->
+        <div class="col-md-9 hospital-list-container">
+            <% locals.items.forEach(function(item, idx) { %>
+                <div class="row hospital-item d-flex">
+                    <div class="col-md-4 hospital-img">
+                        <img src="<%= item.avatar %>" alt="Image <%= idx + 1 %>" class="img-fluid">
+                    </div>
+                    <div class="col-md-8 hospital-caption text-start">
+                        <div class="hospital-title">
+                            <a class="text-decoration-none"><%= item.name %></a>
+                        </div>
+                        <div class="hospital-location">
+                            <p><a><%= item.location %></a> | <%= item.city %></p>
+                        </div>
+                        <div class="news-description">
+                            <p><%= item.description %></p>
+                        </div>
+                        <div class="hospital-link">
+                            <a href="<%= item.website %>" class="text-decoration-none text-end" style="font-size: 0.8rem;">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+    </div>
+</div>
+
+<!-- Pagination -->
+<nav class="hospital-list-pgn align-items-center">
+    <ul class="pagination">
+        <li class="pgn-control pgn-prev">
+            <a href="#" class="page-link">
+                <span aria-hidden="true">«</span>
+            </a>
+        </li>
+        <% for (let i = 1; i <= locals.totalPages; i++) { %>
+            <li class="page-item <%=(i == 1)? 'active' : '' %>"><a class="page-link" href="#"><%= i %></a></li>
+        <% } %>
+        <li class="pgn-control pgn-next">
+            <a href="#" class="page-link">
+                <span aria-hidden="true">»</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script type="text/javascript" src="../public/js/hospitalList.js"></script>
+
+<%- include("partials/footer"); %>

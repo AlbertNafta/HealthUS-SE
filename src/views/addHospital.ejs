@@ -1,0 +1,90 @@
+<%- include("partials/ad_sidebar.ejs"); %>
+
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2">
+    <!-- Sidebar -->
+
+  </div>
+
+  <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10">
+    <div class="container-xl px-4 mt-4">
+      <div class="row">
+        <div class="col-xl-4">
+          <!-- Profile picture card-->
+          <div class="card mb-4 mb-xl-0 w-100">
+            <div class="card-header">Profile Picture</div>
+            <div class="card-body text-center">
+              <!-- Profile picture image-->
+              <img class="img-account-profile rounded-circle mb-2" src="./../../public/images/hospital_ava_admin.jpg" alt="">
+              <!-- Profile picture help block-->
+              <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+              <!-- Profile picture upload button-->
+              <button class="btn btn-primary" type="button" for="customFile">Upload new image</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <!-- Account details card-->
+          <div class="card mb-4 w-100">
+            <div class="card-header">Hospital Details</div>
+            <div class="card-body">
+              <form action="add" method="post">
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control form-control-lg" required/>
+                    <% if (locals.errorMessage1) { %>
+                      <div class="small text-danger"><%= errorMessage1 %></div>
+                    <% } %>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="hospitalID">Hospital ID</label>
+                    <input type="text" id="hospitalID" name="hospitalID" class="form-control form-control-lg" placeholder="hos0000" required/>
+                    <% if (locals.errorMessage2) { %>
+                      <div class="small text-danger"><%= errorMessage2 %></div>
+                    <% } %>
+                  </div>
+                </div>
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="name">Hospital's name</label>
+                    <input type="text" id="name" name="name" class="form-control form-control-lg"/>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="contactNumber">Contact number</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" class="form-control form-control-lg"/>
+                  </div>
+                </div>
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="location">Address</label>
+                    <input type="text" id="location" name="location" class="form-control form-control-lg"/>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="city">City</label>
+                    <input type="text" id="city" name="city" class="form-control form-control-lg"/>
+                  </div>
+                </div>
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control form-control-lg"/>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="website">Website</label>
+                    <input type="url" id="website" name="website" class="form-control form-control-lg"/>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="small mb-1" for="description">Description</label>
+                  <input type="text" id="description" name="description" class="form-control form-control-lg"/>
+              </div>
+                <button class="btn btn-primary" type="submit">Create</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
